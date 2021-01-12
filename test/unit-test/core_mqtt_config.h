@@ -49,7 +49,7 @@
 #endif
 
 #ifndef LIBRARY_LOG_LEVEL
-    #define LIBRARY_LOG_LEVEL    LOG_NONE
+    #define LIBRARY_LOG_LEVEL    LOG_INFO
 #endif
 
 #include "logging_stack.h"
@@ -66,11 +66,5 @@
  * These unit tests expect retrying only twice.
  */
 #define MQTT_MAX_CONNACK_RECEIVE_RETRY_COUNT    ( 2U )
-
-/* Set network context to double pointer to buffer (uint8_t**). */
-struct NetworkContext
-{
-    uint8_t ** buffer;
-};
 
 #endif /* ifndef CORE_MQTT_CONFIG_H_ */
